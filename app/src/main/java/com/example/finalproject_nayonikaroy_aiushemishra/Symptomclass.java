@@ -17,7 +17,7 @@ public class Symptomclass extends AppCompatActivity {
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_symptomclass);
-
+// hi nayo
         Button back = findViewById(R.id.Back);
 
         back.setOnClickListener(new View.OnClickListener() {
