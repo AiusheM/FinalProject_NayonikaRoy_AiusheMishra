@@ -4,42 +4,53 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/Background"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:id="@+id/MainPage"
-        android:layout_width="414dp"
-        android:layout_height="729dp"
-        android:background="#9AC8FF"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteY="2dp">
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="376dp"
+        android:layout_height="144dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="APP NAME"
+        android:textSize="42sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/name"
-            android:layout_width="match_parent"
-            android:layout_height="141dp"
-            android:text="APP NAME" />
+    <Button
+        android:id="@+id/EmergenciesButton"
+        android:layout_width="242dp"
+        android:layout_height="152dp"
+        android:layout_marginTop="204dp"
+        android:background="#EC1515"
+        android:shadowColor="#00FFFFFF"
+        android:text="Emergencies"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/EmergenciesButton"
-            android:layout_width="242dp"
-            android:layout_height="152dp"
-            android:background="#EC1515"
-            android:shadowColor="#00FFFFFF"
-            android:text="Emergencies" />
+    <Button
+        android:id="@+id/CMAButton"
+        android:layout_width="242dp"
+        android:layout_height="152dp"
+        android:layout_marginBottom="220dp"
+        android:background="#FFEB3B"
+        android:text="Contact/ Make Appointment "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <Button
-            android:id="@+id/CMAButton"
-            android:layout_width="242dp"
-            android:layout_height="152dp"
-            android:background="#FFEB3B"
-            android:text="Contact/ Make Appointment " />
-
-        <Button
-            android:id="@+id/SymptomButton"
-            android:layout_width="242dp"
-            android:layout_height="152dp"
-            android:background="#4CAF50"
-            android:text="Symptom Search" />
-    </LinearLayout>
+    <Button
+        android:id="@+id/SymptomButton"
+        android:layout_width="242dp"
+        android:layout_height="152dp"
+        android:background="#4CAF50"
+        android:text="Symptom Search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CMAButton" />
 </androidx.constraintlayout.widget.ConstraintLayout>
