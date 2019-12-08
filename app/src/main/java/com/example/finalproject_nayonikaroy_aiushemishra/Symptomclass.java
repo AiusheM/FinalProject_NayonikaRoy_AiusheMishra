@@ -10,6 +10,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class Symptomclass extends AppCompatActivity {
 
@@ -27,6 +28,18 @@ public class Symptomclass extends AppCompatActivity {
                 call.onCreate(savedInstanceState);
             }
         });
+
+        /*
+        WebApi.startRequest(this, WebApi.API_BASE + "/some/endpoint", response -> {
+            // Code in this handler will run when the request completes successfully
+            // Do something with the response?
+        }, error -> {
+            // Code in this handler will run if the request fails
+            // Maybe notify the user of the error?
+            Toast.makeText(this, "Oh no!", Toast.LENGTH_LONG).show();
+        });
+
+         */
     }
 
 }
