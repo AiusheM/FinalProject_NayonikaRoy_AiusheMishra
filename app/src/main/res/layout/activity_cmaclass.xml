@@ -9,14 +9,30 @@
 
     <Button
         android:id="@+id/Back"
-        android:layout_width="144dp"
-        android:layout_height="0dp"
+        android:layout_width="191dp"
+        android:layout_height="73dp"
         android:layout_marginBottom="40dp"
         android:text="Back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/McKinley"
+        android:layout_width="185dp"
+        android:layout_height="70dp"
+        android:text="McKinley"
+        tools:layout_editor_absoluteX="113dp"
+        tools:layout_editor_absoluteY="351dp" />
+
+    <Button
+        android:id="@+id/OSF"
+        android:layout_width="148dp"
+        android:layout_height="76dp"
+        android:text="OSF"
+        tools:layout_editor_absoluteX="131dp"
+        tools:layout_editor_absoluteY="237dp" />
 
     <TextView
         android:id="@+id/textView"
@@ -30,20 +46,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="406dp"
-        android:layout_height="413dp"
-        android:text="McKinley: 217-333-2700
-        \n  -Make/Cancel Appts
-        \n  -Dial-A-Nurse
-        \nOSF: (217) 337-2000
-        \nCarle: (217) 383-3311"
-        android:textSize="36sp"
-        android:lineSpacingExtra="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.657" />
+    <Button
+        android:id="@+id/Carle"
+        android:layout_width="172dp"
+        android:layout_height="70dp"
+        android:text="Carle"
+        tools:layout_editor_absoluteX="119dp"
+        tools:layout_editor_absoluteY="488dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,12 +1,15 @@
 package com.example.finalproject_nayonikaroy_aiushemishra;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import java.io.IOException;
 import java.nio.channels.Selector;
 import java.util.List;
 
@@ -34,12 +37,17 @@ public class MainActivity extends AppCompatActivity {
                 getCMA();
             }
         });
+        /*
         symptomButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getSymptom();
+                try {
+                    getSymptom();
+                } catch (IOException e) {
+                    e.getMessage();
+                }
             }
-        });
+        });*/
     }
 /*
     public void getEmergencies() {
@@ -54,17 +62,17 @@ public class MainActivity extends AppCompatActivity {
     */
 
     public void getEmergencies() {
-        Emergenciesclass e = new Emergenciesclass();
-        e.onCreate(savedInstanceState);
+        Intent e = new Intent(this, Emergenciesclass.class);
+        startActivity(e);
     }
 
     public void getCMA() {
-        CMAclass u = new CMAclass();
-        u.onCreate(savedInstanceState);
+        Intent u = new Intent(this, CMAclass.class);
+        startActivity(u);
     }
-
-    public void getSymptom() {
+/*
+    public void getSymptom() throws IOException {
         Symptomclass x = new Symptomclass();
         x.onCreate(savedInstanceState);
-    }
+    }*/
 }
