@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import java.nio.channels.Selector;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
     final Bundle savedInstanceState = new Bundle();
 
@@ -54,10 +57,12 @@ public class MainActivity extends AppCompatActivity {
         Emergenciesclass e = new Emergenciesclass();
         e.onCreate(savedInstanceState);
     }
+
     public void getCMA() {
         CMAclass u = new CMAclass();
         u.onCreate(savedInstanceState);
     }
+
     public void getSymptom() {
         Symptomclass x = new Symptomclass();
         x.onCreate(savedInstanceState);
