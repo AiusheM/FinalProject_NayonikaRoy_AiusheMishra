@@ -4,20 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Background"
+    android:background="#03A9F4"
     tools:context=".CMAclass">
 
     <Button
         android:id="@+id/Back"
-        android:layout_width="144dp"
-        android:layout_height="0dp"
+        android:layout_width="191dp"
+        android:layout_height="73dp"
         android:layout_marginBottom="40dp"
-        android:background="@color/colorRedButton"
         android:text="Back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/McKinley"
+        android:layout_width="185dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="360dp"
+        android:text="McKinley"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/OSF"
+        android:layout_width="148dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="260dp"
+        android:text="OSF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView"
@@ -31,20 +52,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="406dp"
-        android:layout_height="413dp"
-        android:text="McKinley: 217-333-2700
-        \n  -Make/Cancel Appts
-        \n  -Dial-A-Nurse
-        \nOSF: (217) 337-2000
-        \nCarle: (217) 383-3311"
-        android:textSize="36sp"
-        android:lineSpacingExtra="10dp"
+    <Button
+        android:id="@+id/Carle"
+        android:layout_width="172dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="204dp"
+        android:text="Carle"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.657" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

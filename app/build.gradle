@@ -10,6 +10,10 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        //useLibrary 'org.apache.http.legacy'
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
     }
     buildTypes {
         release {
@@ -27,4 +31,5 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    //compile group: 'org.apache.httpcomponents', name: 'httpclient', version : '4.5'
 }
