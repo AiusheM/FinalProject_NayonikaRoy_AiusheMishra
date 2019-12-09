@@ -20,6 +20,7 @@ import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
+import java.net.ProtocolException;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.util.HashMap;
@@ -45,46 +46,40 @@ public class Symptomclass extends AppCompatActivity {
             }
         });
 
-        // This code depends on jQuery Core and Handlebars.js
-
 
     }
 
-    URL url = new URL("https://www.nhs.uk/conditions/");
-    HttpURLConnection con = (HttpURLConnection) url.openConnection();
-    con.setRequestMethod("GET");
+    //this is the method for getting a request
 
-    Map<String, String> parameters = new HashMap<>();
-    parameters.add("param1","val");
+    public static void getRequest() throws IOException {
 
-    con.setDoOutput(true);
-    DataOutputStream out = new DataOutputStream(con.getOutputStream());
-    out.writeBytes(ParameterStringBuilder.getParamsString(parameters));
-    out.flush();
-    out.close();
-
-    public static void MyGETRequest() throws IOException {
-        URL urlForGetRequest = new URL("https://jsonplaceholder.typicode.com/posts/1");
+        //Created a URL variable
+        URL url = new URL("https://api.nhs.uk/search/?query={query}");
+        //checks to see if the input/textbox is empty
         String readLine = null;
-        HttpURLConnection conection = (HttpURLConnection) urlForGetRequest.openConnection();
+        //creates a conection object
+        HttpURLConnection conection = (HttpURLConnection) url.openConnection();
+        //creates a GET request
         conection.setRequestMethod("GET");
-        conection.setRequestProperty("userId", "a1bcdef"); // set userId its a sample here
+
+        conection.setHeader("bd4c6c19afb54978a81edcbc60fe0d9d", "{bd4c6c19afb54978a81edcbc60fe0d9d}");
+
+        conection.setRequestProperty("userId", "a1bcdef"); // CHANGE
+
         int responseCode = conection.getResponseCode();
+
         if (responseCode == HttpURLConnection.HTTP_OK) {
-            BufferedReader in = new BufferedReader(
-                    new InputStreamReader(conection.getInputStream()));
+            BufferedReader in = new BufferedReader(new InputStreamReader(conection.getInputStream()));
             StringBuffer response = new StringBuffer();
+
             while ((readLine = in.readLine()) != null) {
                 response.append(readLine);
             }
             in.close();
             // print result
-            System.out.println("JSON String Result " + response.toString());
-            //GetAndPost.POSTRequest(response.toString());
+            //System.out.println("JSON String Result " + response.toString());
         } else {
             System.out.println("GET NOT WORKED");
         }
-
-
     }
 }
