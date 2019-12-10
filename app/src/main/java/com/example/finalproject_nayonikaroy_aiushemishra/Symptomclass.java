@@ -2,6 +2,7 @@ package com.example.finalproject_nayonikaroy_aiushemishra;
 
 import android.content.Intent;
 import android.os.Bundle;
+import java.util.Scanner;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -11,9 +12,12 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
@@ -49,23 +53,15 @@ public class Symptomclass extends AppCompatActivity {
             }
         });
 
-//<<<<<<< HEAD
-        /*
-        WebApi.startRequest(this, WebApi.API_BASE + "/some/endpoint", response -> {
-            // Code in this handler will run when the request completes successfully
-            // Do something with the response?
-        }, error -> {
-            // Code in this handler will run if the request fails
-            // Maybe notify the user of the error?
-            Toast.makeText(this, "Oh no!", Toast.LENGTH_LONG).show();
+        Button calculate = findViewById(R.id.calc);
+
+        calculate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                calculateBMI();
+            }
         });
 
-         */
-/*
-        =======
-
->>>>>>> 9226c509e4068b48622c16a65fbc4d24928e2d73
- */
     }
 /*
     //this is the method for getting a request
@@ -104,5 +100,22 @@ public class Symptomclass extends AppCompatActivity {
 public void getM() {
     Intent e = new Intent(this, MainActivity.class);
     startActivity(e);
+}
+
+    // BMI Calculator in Java
+// Uses metric units
+private void calculateBMI() {
+    EditText w = findViewById(R.id.w);
+    EditText h = findViewById(R.id.h);
+
+    int we = Integer.parseInt(w.getText().toString());
+    int he = Integer.parseInt(h.getText().toString());
+
+    int BMI = 703*(we/((he)* (he)));
+
+    TextView tv = findViewById(R.id.tv);
+
+    tv.setText(""+BMI);
+
 }
 }
