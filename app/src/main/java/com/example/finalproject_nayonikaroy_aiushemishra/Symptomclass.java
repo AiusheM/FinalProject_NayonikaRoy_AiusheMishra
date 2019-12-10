@@ -44,7 +44,7 @@ public class Symptomclass extends AppCompatActivity {
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_symptomclass);
-// hi nayo
+
         Button back = findViewById(R.id.Back);
 
         back.setOnClickListener(new View.OnClickListener() {
@@ -109,11 +109,14 @@ private void calculateBMI() {
     EditText w = findViewById(R.id.w);
     EditText h = findViewById(R.id.h);
 
-    int we = Integer.parseInt(w.getText().toString());
-    int he = Integer.parseInt(h.getText().toString());
-
-    double BMI = 703*(we/((he)*(he)));
-
+    int he = Integer.parseInt(w.getText().toString());
+    int we = Integer.parseInt(h.getText().toString());
+    System.out.println(we + " input " + he);
+    double mul = he*he;
+    int num = 703*we;
+    System.out.println(mul + " input " + num);
+    double BMI = num/mul;
+    System.out.println(BMI + "message");
     TextView tv = findViewById(R.id.tv);
 
     Log.i("error", "" + BMI);
