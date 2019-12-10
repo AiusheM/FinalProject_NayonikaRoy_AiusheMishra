@@ -13,7 +13,7 @@
         android:layout_height="144dp"
         android:layout_marginTop="40dp"
         android:gravity="center"
-        android:text="APP NAME"
+        android:text="EasyHealth UIUC"
         android:textSize="42sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
