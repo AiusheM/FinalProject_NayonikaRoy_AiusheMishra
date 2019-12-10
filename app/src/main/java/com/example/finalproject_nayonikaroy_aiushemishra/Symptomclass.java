@@ -111,7 +111,7 @@ private void calculateBMI() {
     int we = Integer.parseInt(w.getText().toString());
     int he = Integer.parseInt(h.getText().toString());
 
-    int BMI = 703*(we/((he)* (he)));
+    double BMI = 703*(we/((he)* (he)));
 
     TextView tv = findViewById(R.id.tv);
 
