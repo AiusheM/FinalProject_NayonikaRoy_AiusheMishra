@@ -64,21 +64,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent" />
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="406dp"
-        android:layout_height="413dp"
-        android:lineSpacingExtra="10dp"
-        android:text="Police/Medical Emergency: 911
-        \nPolice(Non-emergencies): 217-333-8911
-        \nIllinois Poison Center: 800-942-5969
-        \nEmergency Dean: 217-333-0050
-        \nPsychological Emergency Services: 217-359-4141
-"
-        android:textSize="28sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.657" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
