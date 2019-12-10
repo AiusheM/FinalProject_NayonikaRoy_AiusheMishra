@@ -28,11 +28,7 @@ public class MainActivity extends AppCompatActivity {
         emergenciesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                try {
-                    getEmergencies();
-                } catch (IOException e) {
-                    e.getMessage();
-                }
+                getEmergencies();
             }
         });
         cmaButton.setOnClickListener(new View.OnClickListener() {
@@ -65,9 +61,9 @@ public class MainActivity extends AppCompatActivity {
     }
     */
 
-    public void getEmergencies() throws IOException {
-        Intent e = new Intent(this, Emergenciesclass.class);
-        startActivity(e);
+    public void getEmergencies() {
+        Intent i = new Intent(this, Emergenciesclass.class);
+        startActivity(i);
     }
 
     public void getCMA() {
