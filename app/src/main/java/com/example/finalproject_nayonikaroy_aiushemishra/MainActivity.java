@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
                 getCMA();
             }
         });
-        /*
+
         symptomButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                     e.getMessage();
                 }
             }
-        });*/
+        });
     }
 /*
     public void getEmergencies() {
@@ -70,9 +70,9 @@ public class MainActivity extends AppCompatActivity {
         Intent u = new Intent(this, CMAclass.class);
         startActivity(u);
     }
-/*
+
     public void getSymptom() throws IOException {
-        Symptomclass x = new Symptomclass();
-        x.onCreate(savedInstanceState);
-    }*/
+        Intent x = new Intent(this, Symptomclass.class);
+        startActivity(x);
+    }
 }

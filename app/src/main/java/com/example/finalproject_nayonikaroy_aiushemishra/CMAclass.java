@@ -31,8 +31,7 @@ public class CMAclass extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MainActivity call = new MainActivity();
-                call.onCreate(savedInstanceState);
+                getM();
             }
         });
 
@@ -88,5 +87,10 @@ public class CMAclass extends AppCompatActivity {
             }
         });
     }
+    public void getM() {
+        Intent e = new Intent(this, MainActivity.class);
+        startActivity(e);
+    }
 }
+
 //we may have to double check if this counts as an android feauture bc technically this is not calling
