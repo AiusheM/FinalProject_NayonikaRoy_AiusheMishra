@@ -10,6 +10,7 @@ import com.google.android.material.snackbar.Snackbar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -111,10 +112,11 @@ private void calculateBMI() {
     int we = Integer.parseInt(w.getText().toString());
     int he = Integer.parseInt(h.getText().toString());
 
-    double BMI = 703*(we/((he)* (he)));
+    double BMI = 703*(we/((he)*(he)));
 
     TextView tv = findViewById(R.id.tv);
 
+    Log.i("error", "" + BMI);
     tv.setText(""+BMI);
 
 }
